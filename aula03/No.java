@@ -1,4 +1,4 @@
-class No<T>{
+public class No<T>{
 
     private T dado;
     private No<T> nextNo;
@@ -7,12 +7,13 @@ class No<T>{
     public No(T dado){
         this(dado, null);
     }
-    
-    public No(T dado, No<T> no){
+
+    public No(T dado, No<T> nextNo){
         this.dado = dado;
-        this.nextNo = no;
+        this.nextNo = nextNo;
     }
-// Getters e Setters
+
+// getters e setters
 
     public T getDado(){
         return dado;
@@ -26,16 +27,12 @@ class No<T>{
         return this.nextNo;
     }
 
-    public void setNextNo(No<T> nextNo){
+    public void setNextNo(No <T> nextNo){
         this.nextNo = nextNo;
     }
 
     @Override
-    public String toString() {
+    public String toString(){
         return "Dado{" + getDado() + "}";
     }
-
-    
-    
-    
 }
