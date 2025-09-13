@@ -46,6 +46,7 @@ public class Lista<T>{
                 System.out.println(aux.getDado());
                 aux = aux.getNextNo();
             }
+                    
         }  
     }
 }
