@@ -61,7 +61,7 @@ public class Deque{
             System.out.println("Lista vazia");
         }else{
             System.out.println("Dado: " + ultimoNo.getDado() + " removido.");
-            ultimoNo = ultimoNo.getProximoNo();
+            ultimoNo = ultimoNo.getAnteriorNo();
             if(ultimoNo != null){
                 ultimoNo.setProximoNo(null);
             }else{
