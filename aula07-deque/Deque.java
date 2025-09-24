@@ -52,9 +52,8 @@ public class Deque{
             } else {
                 ultimoNo = null;
             }
-        tamanho++;
-        atualizaIndice();
         }
+        tamanho--;
     }
 
     public void removeFinal(T dado){
@@ -68,7 +67,7 @@ public class Deque{
             }else{
                 primeiroNo = null;
             }
-        tamanho++;
+        tamanho--;
         atualizaIndice();
         }
     }
