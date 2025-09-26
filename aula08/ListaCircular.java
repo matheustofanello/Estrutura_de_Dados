@@ -69,7 +69,24 @@ public class ListaCircular<T>{
 
     public T removeFinal(){
         if(ultimoNo == null){
-            
+            System.out.println("Lista vazia!");
+            return null;
+        } else {
+            T dadoTemp = ultimo.getDado();
+            if(ultimoNo == ultimoNo.getNextNo()){
+                primeiroNo = null;
+                ultimoNo = null;
+                tamanho--;
+                return dadoTemp;
+            }
+            No<T> aux = primeiroNo;
+            while(aux.getNextNo() != ultimoNo){
+                aux = aux.getNextNo();
+            }
+            aux.setNextNo(primeiroNo);
+            ultimoNo = aux;
+            tamanho--;
+            return dadoTemp;
         }
     }
 
