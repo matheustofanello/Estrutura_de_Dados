@@ -54,6 +54,7 @@ public class Deque{
             }
         }
         tamanho--;
+        atualizaIndice();
     }
 
     public void removeFinal(T dado){
@@ -86,4 +87,44 @@ public class Deque{
         }
     }
 
+    public T peekInicio(){
+        if(primeiroNo == null){
+            System.out.println("Deque vazio!");
+            return null;
+        } else {
+            return primeiroNo.getDado();
+        }
+    }
+
+    public T peekFinal(){
+        if(ultimoNo == null){
+            System.out.println("Deque vazio!");
+            return null;
+        } else {
+            return ultimoNo.getDado();
+        }
+    }
+
+    public void atualizaIndice(){
+        NoDuplo<T> atual = primeiroNo;
+        int indice = 0;
+        while(atual != null){
+            atual.setIndice(indice);
+            atual = atual.getProximoNo();
+            indice++;
+        }
+    }
+
+    public int tamanhoDeque(){
+        if(ultimoNo == null){
+            return 0;
+        } else {
+            return ultimoNo.getIndice() + 1;
+        }
+    }
+
+    public void destruirDeque(){
+        primeiroNo = null;
+        ultimoNo = null;
+    }
 }
