@@ -140,5 +140,7 @@ public class ArvoreAVL {
         }
     }
 
-    private void imprimir
+    private void imprimirPosOrdem(){
+        imprimirPor
+    }
 }
